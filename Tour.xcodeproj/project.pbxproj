@@ -13,6 +13,7 @@
 		D8EED88A2AD436DC0055B7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8EED8892AD436DC0055B7C4 /* Preview Assets.xcassets */; };
 		D8EED8912AD479BA0055B7C4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EED8902AD479BA0055B7C4 /* Destination.swift */; };
 		D8EED8932AD494090055B7C4 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EED8922AD494090055B7C4 /* EditDestinationView.swift */; };
+		D8EED8952AD4A1EC0055B7C4 /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EED8942AD4A1EC0055B7C4 /* DestinationListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		D8EED8892AD436DC0055B7C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8EED8902AD479BA0055B7C4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		D8EED8922AD494090055B7C4 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
+		D8EED8942AD4A1EC0055B7C4 /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D8EED8882AD436DC0055B7C4 /* Preview Content */,
 				D8EED8902AD479BA0055B7C4 /* Destination.swift */,
 				D8EED8922AD494090055B7C4 /* EditDestinationView.swift */,
+				D8EED8942AD4A1EC0055B7C4 /* DestinationListingView.swift */,
 			);
 			path = Tour;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				D8EED8832AD436DA0055B7C4 /* TourApp.swift in Sources */,
 				D8EED8912AD479BA0055B7C4 /* Destination.swift in Sources */,
 				D8EED8932AD494090055B7C4 /* EditDestinationView.swift in Sources */,
+				D8EED8952AD4A1EC0055B7C4 /* DestinationListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
