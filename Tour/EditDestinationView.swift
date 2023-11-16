@@ -10,26 +10,59 @@ import SwiftData
 
 struct EditDestinationView: View {
     @Bindable var destination: Destination
+    @State private var newSightName  = ""
     var body: some View {
-        Form {
+        Form{
             TextField("Name",text: $destination.name)
             TextField("Details", text: $destination.detail,axis: .vertical)
             DatePicker("Date",selection: $destination.date)
             Section("Priority"){
                 Picker("Priority",selection: $destination.priority){
-                    Text("Maybe")
+                    Text("Maybee")
                     Text("Important")
                     Text("Very Important")
                 }
                 .pickerStyle(.segmented)
                 
             }
+            //Section("Sight"){
+            //                ForEach(destination.sight){sight in
+            //                    Text(sight.name)
+            //                }
+            //                    HStack{
+            //                        TextField("Add A New Sigh in \(destination.name)",text: $newSightName)
+            //                        Button("Add",action: addSight)
+            //                    }
+            //                }
+            //
+            
+            Section("Sight"){
+                ForEach(destination.sights){sight in
+                    
+                    
+                    Text(sight.name)
+                }
+                
+                HStack {
+                    TextField("Add a new sight in \(destination.name)", text: $newSightName)
+                    
+                    Button("Add", action: addSight)
+                }
+            }
+        }        .navigationTitle("Edit Destination")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    func addSight() {
+        guard newSightName.isEmpty == false else { return }
+        
+        withAnimation {
+            let sight = Sight(name: newSightName)
+            destination.sights.append(sight)
+            newSightName = ""
         }
-        .navigationTitle("Edit Destination")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
-
 #Preview {
     do{
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
@@ -37,9 +70,9 @@ struct EditDestinationView: View {
         let example = Destination(name: "Example Destination",detail: "fnjvndjvndkvnkdjnvkdvnjdbvkdvbdjknvfhugndkfjbvdiouvhd")
         return EditDestinationView(destination: example)
             .modelContainer(container)
-    
+        
     } catch{
         fatalError("Failed To Create Model Container")
     }
-  
+    
 }
